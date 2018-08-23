@@ -1,0 +1,7 @@
+$(document).ready(function() {
+
+let new_gossip = $("<%= j (render 'layouts/gossip', gossip: @gossip) %>").hide();
+$('ul').append(new_gossip);
+new_gossip.slideDown();
+
+});

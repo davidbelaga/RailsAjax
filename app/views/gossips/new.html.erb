@@ -1,0 +1,13 @@
+<div class="form">
+<%= form_with(model: @gossip) do |f| %>
+  <div class="form-control">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="form-control">
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+  </div>
+  <%= f.submit %>
+  <% end %>
+</div>

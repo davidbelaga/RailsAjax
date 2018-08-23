@@ -1,0 +1,25 @@
+<h1>All the gossips</h1>
+
+<div>
+<ul>
+<% @gossips.each do |g|  %>
+  <li> <%= g.title  %></li>
+<% end %>
+  </ul>
+</div>
+
+<h2>Create a new gossips</h2>
+
+<div class="form">
+<%= form_with(model: @gossip) do |f| %>
+  <div class="form-control">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="form-control">
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+  </div>
+  <%= f.submit %>
+  <% end %>
+</div>
